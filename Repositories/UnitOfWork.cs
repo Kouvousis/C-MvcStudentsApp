@@ -18,6 +18,8 @@ namespace SchoolApp.Repositories
 
         public CourseRepository CourseRepository => new(_context);
 
+        public UserRepository UserRepository => new(_context);
+
         public async Task<bool> SaveAsync()
         {
             return await _context.SaveChangesAsync() > 0;
