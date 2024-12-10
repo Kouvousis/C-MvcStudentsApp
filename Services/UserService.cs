@@ -20,14 +20,52 @@ namespace SchoolApp.Services
         }
 
 
-        public Task<List<User>> GetAllUsersFiltered(int pageNumber, int pageSize, UserFiltersDTO userFiltersDTO)
+        public async Task<List<User>> GetAllUsersFiltered(int pageNumber, int pageSize, UserFiltersDTO userFiltersDTO)
         {
-            throw new NotImplementedException();
+            List<User> users = new();
+            List<Func<User, bool>> predicates = new();
+
+            try
+            {
+                if (!string.IsNullOrEmpty(userFiltersDTO.Username))
+                {
+                    predicates.Add(u => u.Username == userFiltersDTO.Username);
+                }
+
+                if (!string.IsNullOrEmpty(userFiltersDTO.Email))
+                {
+                    predicates.Add(u => u.Email == userFiltersDTO.Email);
+                }
+
+                if (!string.IsNullOrEmpty(userFiltersDTO.UserRole))
+                {
+                    predicates.Add(u => u.UserRole.ToString() == userFiltersDTO.UserRole);
+                }
+
+                users = await _unitOfWork.UserRepository
+                    .GetAllUsersFilteredPaginatedAsync(pageNumber, pageSize, predicates);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("{Message}{Exception}", e.Message, e.StackTrace);
+                throw;
+            }
+            return users;
         }
 
-        public Task<User?> GetUserByUsernameAsync(string username)
+        public async Task<User?> GetUserByUsernameAsync(string username)
         {
-            throw new NotImplementedException();
+            User? user = null;
+
+            try
+            {
+                user = await _unitOfWork.UserRepository.GetByUsernameAsync(username);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("{Message}{Exception}", e.Message, e.StackTrace);
+            }
+            return user;
         }
 
         public async Task<User?> VerifyAndGetUserAsync(UserLoginDTO credentials)
@@ -36,7 +74,7 @@ namespace SchoolApp.Services
 
             try
             {
-                user = await _unitOfWork.UserRepository.GetUserAsync(credentials.Username, credentials.Password);
+                user = await _unitOfWork.UserRepository.GetUserAsync(credentials.Username!, credentials.Password!);
                 _logger.LogInformation("{Message}", "User: " + user + " found and returned.");       // TODO toString()
             }
             catch (Exception ex)

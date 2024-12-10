@@ -170,3 +170,15 @@ C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\runtimes\win
 C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\obj\Debug\net8.0\SchoolApp.csproj.AssemblyReference.cache
 C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\obj\Debug\net8.0\SchoolApp.csproj.Up2Date
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\BCrypt.Net-Core.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\jim\source\repos\Web6MVCDBFirst\SchoolApp\obj\Debug\net8.0\SchoolApp.sourcelink.json

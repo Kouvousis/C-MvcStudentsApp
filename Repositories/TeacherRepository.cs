@@ -11,7 +11,7 @@ namespace SchoolApp.Repositories
         {
         }
 
-        public async Task<Teacher?> GetByPhoneNumberAsync(string phoneNumber)
+        public async Task<Teacher?> GetByPhoneNumberAsync(string? phoneNumber)
         {
             return await context.Teachers.Where(t => t.PhoneNumber == phoneNumber).FirstOrDefaultAsync();
         }
